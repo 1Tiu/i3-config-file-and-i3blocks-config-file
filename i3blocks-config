@@ -29,6 +29,12 @@ command=$SCRIPT_DIR/$BLOCK_NAME
 separator_block_width=15
 markup=none
 
+[bandwidth]
+#INTERFACE=eth0
+label=bandwidth: 
+command=/home/tiu/.config/i3blocks/scripts/bandwidth/bandwidth
+interval=1
+
 # Volume indicator
 #
 # The first parameter sets the step (and units to display)
@@ -42,6 +48,13 @@ label=vol:
 interval=once
 signal=10
 #STEP=5%
+
+# CPU usage
+[cpu_usage]
+label=cpu: 
+command=/home/tiu/.config/i3blocks/scripts/cpu_usage/cpu_usage
+separator=true
+interval=30
 
 # Memory usage
 #
@@ -57,6 +70,13 @@ label=SWAP
 #command=/home/tiu/.config/i3blocks/scripts/memory/memory
 instance=swap
 separator=false
+interval=30
+
+# GPU usage
+[GPU]
+label=gpu: 
+command=/home/tiu/.config/i3blocks/scripts/gpu-load/gpu-load
+separator=true
 interval=30
 
 # Disk usage
@@ -87,11 +107,6 @@ separator=true
 label=wifi:
 interval=10
 separator=false
-
-[bandwidth]
-#INTERFACE=eth0
-command=/home/tiu/.config/i3blocks/scripts/bandwidth/bandwidth
-interval=1
 
 # CPU usage
 #
